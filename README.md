@@ -1,5 +1,5 @@
 ## Description
-So I made something different here, this is a program that I tested out to see how files can be logged after either moved, deleted, created or modified. This program can be used for any directory or folder of any kind.
+So I made something different here, this is a program that I tested out to see how files can be logged after being moved, deleted, created or modified. You can use this anywhere and for any directory or folder.
 
 ## Features
 
