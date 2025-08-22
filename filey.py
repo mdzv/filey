@@ -2,6 +2,7 @@
 
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import keyboard
 import time
 import os
 
@@ -29,9 +30,9 @@ def RunFiley(path_to_watch):
 
     try:
         while True:
-            time.sleep(1)
+            time.sleep(0)
             if keyboard.is_pressed("esc"):
-                print(Fore.MAGENTA + "Filey stopped watching." + Style.RESET_ALL)
+                print( "Filey stopped watching.")
                 break
     finally:
         observer.stop()
