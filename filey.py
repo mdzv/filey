@@ -25,14 +25,19 @@ def RunFiley(path_to_watch):
     observer.start()
 
     print(f"Filey is watching: {path_to_watch}")
+    print("Press ESC to stop...\n")
+
     try:
         while True:
             time.sleep(1)
-    except KeyboardInterrupt:  
-        print("Filey stopped watching.")
+            if keyboard.is_pressed("esc"):
+                print(Fore.MAGENTA + "Filey stopped watching." + Style.RESET_ALL)
+                break
+    finally:
         observer.stop()
-    observer.join()
+        observer.join()
 
 if __name__ == "__main__":
     folder = os.path.expanduser("~/Desktop") 
     RunFiley(folder)
+
